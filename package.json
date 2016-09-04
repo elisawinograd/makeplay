@@ -1,0 +1,19 @@
+{
+  "name": "make-play",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:elisawino/makeplay.git"
+  },
+  "author": "Lane Goldberg <lane@builtbylane.com> (http://builtbylane.com/)",
+  "license": "private",
+  "devDependencies": {
+    "gulp": "^3.8.9",
+    "gulp-connect": "^2.0.6"
+  }
+}
