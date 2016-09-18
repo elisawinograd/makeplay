@@ -701,7 +701,6 @@ h1.hash{
 	font-family: 'rectaregular';
 	padding: 18px 16px;
 	width: 50%;
-	overflow: scroll;
 	display: none;
 }
 
@@ -714,8 +713,7 @@ h1.hash{
 
 .activity-expanded-text {
 	float:left;
-	padding: 5% 10% 0% 10%;
-	
+	padding: 2px;	
 }
 
 ::-webkit-scrollbar:horizontal {
@@ -1309,10 +1307,18 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 /*  ONE COLUMN */
 
 @media only screen and (max-width: 500px) {
+	.skip-content {
+		display:none;
+	}
+
 	.menu {
 		width: 89%;
 		text-align: center;
 		padding: 4% 0 0 0;
+	}
+
+	.activity-share-wrap {
+		padding: 0px;
 	}
 
 	.top-menu {
@@ -1360,6 +1366,10 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 		z-index: 5;
 		overflow: hidden;
 		text-align: center;
+	}
+
+	.activity-expanded-text {
+		padding: 0px;	
 	}
 
 	#search {
