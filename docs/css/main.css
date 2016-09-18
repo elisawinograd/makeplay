@@ -676,11 +676,7 @@ h1.hash{
 
 /* ITEM OPEN */
 .close-img {
-  cursor: pointer;
-	width: 10px;
-	height: 10px;
 	float: right;
-
 }
 
 .act-share-wrap {
@@ -757,10 +753,6 @@ h1.title {
 	font-weight: normal;
 	margin: 0;
 	text-align: center;
-}
-
-p.filter{
-	font-family: 'rectaitalic', helvetica, sans-serif;
 }
 
 h2.sub-title {
