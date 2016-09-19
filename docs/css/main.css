@@ -677,6 +677,7 @@ h1.hash{
 /* ITEM OPEN */
 .close-img {
 	float: right;
+	width: 30px;
 }
 
 .act-share-wrap {
