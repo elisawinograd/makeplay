@@ -1299,10 +1299,6 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 		display:none;
 	}
 
-	.nav.stick {
-		padding-left: 20px;
-	}
-
 	[for="read_more"] {
 		display: none;
 	}
@@ -1356,10 +1352,14 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
   		text-align:center;
   	}
 
+  	nav {
+  		padding-left: 20px;
+  	}
+
   	.categories{
-  		float:left;
-  		text-align:center;
-  		padding-left:10px;
+  		float: left;
+  		text-align: center;
+  		padding-left: 0px;
   	}
 
   	#input {
