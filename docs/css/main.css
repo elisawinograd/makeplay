@@ -703,8 +703,6 @@ h1.hash{
 
 .js-active .item-description-wrap {
 	display: block;
-    border-bottom: 1px solid #fff;
-    border-top: 1px solid #fff;
 }
 
 .activity-expanded-text {
