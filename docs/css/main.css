@@ -139,7 +139,7 @@ input:focus, textarea:focus {
 
 .about-container {
 	overflow: hidden;
-	padding: 20px 55px;
+	padding: 20px 30px;
 }
 
 .about-container p {
@@ -396,7 +396,7 @@ ul.top-menu {
 
 .menu-item {
 	float: left;
-	padding-left: 21px;
+	padding-right: 20px;
 	font-size: 20px;
 }
 
@@ -1191,7 +1191,6 @@ footer {
 .categories {
 	float: left;
 	font-size: 20px;
-	padding-left: 10px;
 }
 
 .categories a {
@@ -1296,8 +1295,17 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 /*  ONE COLUMN */
 
 @media only screen and (max-width: 500px) {
-	.skip-content {
+	#home {
 		display:none;
+	}
+
+	#read-more {
+		display:none;
+	}
+
+	.about-container {
+		overflow: hidden;
+		padding: 20px;
 	}
 
 	.menu {
@@ -1359,6 +1367,10 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 
 	.activity-expanded-text {
 		padding: 0px;	
+	}
+
+	.article-wrapper {
+		padding: 0 20px;
 	}
 
 	#search {
