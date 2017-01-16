@@ -112,7 +112,7 @@ a:hover, a:active {
 }
 
 .skip-content {
-	background-color: #e0e0e0;
+	background-color: #f0f0f0;
 	font-family: 'rectaregular', helvetica, sans-serif;
 	text-align: center;
 	height: 50px;
@@ -140,6 +140,7 @@ input:focus, textarea:focus {
 .about-container {
 	overflow: hidden;
 	padding: 20px 30px;
+	text-align: center;
 }
 
 .about-container p {
@@ -176,6 +177,7 @@ input:focus, textarea:focus {
 
 article {
     position: relative;
+    padding: 0 4.5%;
     *zoom: 1;
 }
 
@@ -586,7 +588,6 @@ h1.hash{
 	background-color: #e0e0e0;
 	display: block;
 	z-index: 0;
-	border-bottom: 1px solid #fff;
 }
 
 .scroll {
