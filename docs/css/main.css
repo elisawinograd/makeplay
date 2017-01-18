@@ -814,7 +814,7 @@ ul.activity-text li{ text-indent:-5px; }
 	            	position: absolute;
 	            	cursor: pointer;
 	            	display: block;
-	                background: url(../img/a19.png) center center no-repeat;
+	                background: url(../img/arrows.svg) center center no-repeat;
 	                overflow: hidden;
 	                width: 50%;
 	            }
