@@ -41,7 +41,7 @@
 }
 
 *, *:before, *:after {
-	-webkit-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;   
   box-sizing: border-box;        
 }
@@ -139,7 +139,6 @@ input:focus, textarea:focus {
 
 .about-container {
 	overflow: hidden;
-	padding: 20px 30px;
 	text-align: center;
 }
 
@@ -826,6 +825,13 @@ ul.activity-text li{ text-indent:-5px; }
 	            .jssora21rdn { background-position: -303px -33px; }
 
 /* SLIDESHOW */
+#slider1_container {
+	background-color: red; 
+	position: relative; 
+	top: 0px; 
+	height: 300px; 
+	overflow: hidden; 
+}
 
 .slideshow-home{
  	position: relative;
@@ -1235,6 +1241,70 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
     display: block;
     visibility: visible;
 }
+
+/* SLIDESHOW TEST START*/
+    /* Prevent the slideshow from flashing on load */
+    #slides {
+      display: none;
+    }
+
+    /* Center the slideshow */
+    .container {
+      margin: 0 auto;
+    }
+
+    /* Show active item in the pagination */
+    .slidesjs-pagination .active {
+      color:red;
+    }
+
+    a.slidesjs-next,
+    a.slidesjs-previous, {
+      background-image: url(img/arrows.svg);
+      background-repeat: no-repeat;
+      display:block;
+      width:12px;
+      height:18px;
+      overflow: hidden;
+      text-indent: -9999px;
+      float: left;
+      margin-right:5px;
+    }
+
+    /* Media quires for a responsive layout */
+
+    /* For tablets & smart phones 
+    @media (max-width: 767px) {
+      body {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .container {
+        width: auto;
+      }
+    }
+
+    /* For smartphones 
+    @media (max-width: 480px) {
+      .container {
+        width: 100%;
+      }
+    }
+
+    /* For smaller displays like laptops 
+    @media (min-width: 768px) and (max-width: 979px) {
+      .container {
+        width: 724px;
+      }
+    }
+
+    /* For larger displays 
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px;
+      }
+    }
+/* SLIDESHOW TEST END*/
 
 /*  MEDIA QUERIES */
 
