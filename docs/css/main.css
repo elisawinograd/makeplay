@@ -134,6 +134,7 @@ input:focus, textarea:focus {
 /* ABOUT */
 
 .about-container {
+	border-top: 1px solid #fff;
 	overflow: hidden;
 	padding: 20px 30px;
 	text-align: center;
@@ -327,17 +328,10 @@ nav {
 nav.stick {
 	top:0;
 	width: 100%;
-	background-color: #e0e0e0;
+	background-color: #f6f6f6;
 	z-index: 10000;
  	display: block;
 	margin: 0;
-	border-bottom: solid 1px #ffffff;
-  /* little hack to make it have no height*/
-  
-  /*
-    -webkit-transition: opacity 0.25s ease-in-out;
-  -moz-transition: opacity 0.25s ease-in-out;
-  transition: opacity 0.25s ease-in-out;*/
 }
 
 #js-nav-anchor {
@@ -395,7 +389,11 @@ ul.top-menu {
 .menu-item {
 	float: left;
 	padding-right: 20px;
-	font-size: 20px;
+	font-size: 16px;
+}
+
+.menu-items-next {
+	font-size: 16px;
 }
 
 .menu-item-first {
@@ -797,7 +795,7 @@ ul.activity-text li{ text-indent:-5px; }
 
 /* SLIDESHOW START */
     .slider {
-    	width: 60%;
+    	width: 80%;
      	margin: 0px auto;
     }
 
@@ -1030,8 +1028,9 @@ input[type=checkbox]:checked ~ [for="prints"] span:last-of-type {
 
 #contact {
 	width: 100%;
+    float: left;
     overflow: hidden;
-    padding: 80px 80px;
+    padding: 100px 40px;
     z-index: 10000;
     text-align: center;
     border-top: solid 1px #ffffff;
@@ -1044,7 +1043,18 @@ input[type=checkbox]:checked ~ [for="prints"] span:last-of-type {
 
 .contact-text {
 	font-size: 16px;
-	margin-top: 0;
+	padding-bottom: 10px;
+}
+
+.contact-us {
+	border: 1px solid #fff;
+    padding: 10px 30px;
+    margin: 20px;
+}
+
+.contact-us:hover {
+	background-color: #f6f6f6;
+	text-decoration: none;
 }
 
 #contact-thanks {
@@ -1156,7 +1166,6 @@ footer {
 
 .categories {
 	float: left;
-	font-size: 20px;
 }
 
 .categories a {
@@ -1313,17 +1322,20 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
     	width: 100%;
   	}
 
-  	.menu-item {
-  		float:left;
-  		text-align:center;
-  	}
-
   	nav {
   		padding-left: 20px;
   	}
 
   	.categories{
   		float: left;
+  		font-size: 16px;
+  		text-align: center;
+  		padding-left: 0px;
+  	}
+
+  	.nav-right{
+  		float: right;
+  		font-size: 16px;
   		text-align: center;
   		padding-left: 0px;
   	}

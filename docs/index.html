@@ -21,6 +21,17 @@
     <script src="js/vendor/imagesloaded.pkgd.js"></script>
     
     <script src="js/vendor/jquery.print.js"></script>
+
+    <!-- GOOGLE ANALYTICS -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-86878575-2', 'auto');
+      ga('send', 'pageview');
+    </script>
     
     <!--script src='https://www.google.com/recaptcha/api.js'></script>-->
     
@@ -58,20 +69,6 @@
 
     <!-- ABOUT -->
     <div id="js-nav-anchor"></div>
-    <nav id="js-main-nav" class="stick">
-      <div class="clearfix"></div>
-      <!--<ul class="top-menu">
-          <div class="menu-items-next">
-            <li> <a href="#about" class="menu-item"> about </a> </li>
-            <li> <a href="#activities" class="menu-item"> activities </a> </li>
-            <li> <a href="#resources" class="menu-item"> resources </a> </li>
-            <li class="categories">
-                  <a class="js-category-toggler categories"> sort activities <span class="js-plus-minus">-</span></a> 
-            </li>
-          </div>
-        </ul>-->
-      <div class="clearfix"></div>
-    </nav>
     <div class="about-container">
       <div role="about" id="about" tabindex="-1">
         <article> 
@@ -97,6 +94,21 @@
         </article>
       </div>
     </div>
+    <nav id="js-main-nav" class="stick">
+      <div class="clearfix"></div>
+      <ul class="top-menu">
+          <div class="menu-items-next">
+            <!--<li> <a href="#about" class="menu-item"> about </a> </li>
+            <li> <a href="#activities" class="menu-item"> activities </a> </li>-->
+            <li class="nav-right"> <a href="#resources" class="menu-item"> resources </a> </li>
+            <li class="nav-right"> <a href="malito:elliswinos@yahoo.com" class="menu-item"> contact </a> </li>
+            <li class="categories">
+                  <a class="js-category-toggler categories"> sort activities <span class="js-plus-minus">-</span></a> 
+            </li>
+          </div>
+        </ul>
+      <div class="clearfix"></div>
+    </nav>
     <div id="filters-section-wrap">
       <div class="panel-group" id="accordion">
         <div id="filters-collapse" class="panel-collapse collapse in">
@@ -129,22 +141,6 @@
       </div>
     </div>
     <div id="js-filters-section-wrap-sizer"></div>
-
-    <!-- MENU -->
-    
-    <!-- PRINT SECTION -->
-    <!--  <p>
-        <a class="print">Print here</a>
-    </p>
-    <div class="printable">
-        <h2>
-            Print this...
-        </h2>
-        <p>
-            <img src="http://placehold.it/350x150"/>
-        </p>
-    </div> -->
-    <!-- END PRINT SECTION -->
 
     <!-- IMAGE GRID -->    
 
@@ -680,6 +676,15 @@
               <label for="articles"><span>Articles +</span><span>Articles -</span></label> 
               <section>
                 <div class="article-wrapper">
+                  <p class="article-source">
+                    Upworthy
+                  </p>
+                  <p class="article-title">
+                    This DIY toy is fun and simple — and could help tackle malaria and other diseases.
+                  </p>
+                  <p class="article-link"> read the publication <a href="http://www.upworthy.com/this-diy-toy-is-fun-and-simple-and-could-help-tackle-malaria-and-other-diseases?c=tpstream"> here </a>
+                </div>
+                <div class="article-wrapper">
                   <p class="article-date"> OCT. 11, 2014 </p>
                   <p class="article-source">
                     The New York Times
@@ -759,51 +764,19 @@
                     Children and Parents: Media Use and Attitudes Report 2014
                   </p>
                   <p class="article-link"> read the publication <a href="http://stakeholders.ofcom.org.uk/market-data-research/other/research-publications/childrens/children-parents-oct-14/"> here </a>
+                  </p>
                 </div>               
               </section>
             </article>
-            <!-- <article>
-              <input type="checkbox" id="prints" role="button">
-              <label for="prints"><span> Print-outs +</span><span> Print-outs -</span></label> 
-              <section>     
-                <div class="print-grid-wrap">
-                    
-                  <div class="print-grid">
-                    <a class="print-wrap" href="projects/slot-machine.html">
-                      <img src="img/act/slot-machine.jpg" alt="slot-machine">
-                      <span class="print-text">
-                        <span class="print-text-inner">
-                          <span class="activity-title"> Slot Machine </span>
-                          <span class="filter-text"> Set up: Planned </span>
-                          <span class="filter-text"> Location: Indoor </span>
-                          <span class="filter-text"> Age: 1-2 </span>
-                        </span>
-                      </span>
-                    </a>
-                  </div>
-                
-                  <div class="print-grid">
-                    <a href="#print2">
-                      <img src="img/act/slot-machine.jpg" alt="slot-machine">
-                      <span class="print-text">
-                        <span class="print-text-inner">
-                          <span class="activity-title"> Slot Machine </span>
-                          <span class="filter-text"> Set up: Planned </span>
-                          <span class="filter-text"> Location: Indoor </span>
-                          <span class="filter-text"> Age: 1-2 </span>
-                        </span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </section>
-            </article> -->
     </div>
     <div id="contact">
       <p class="contact-text">
         A special thanks to the people who made this site possible: </br>
         Daniela Mekler, Lane Goldberg, Paula Winograd, Tomas Griffiths. </br>
         And the endless pintrest members and bloggers from whom I fed off of to build these activities.
+      </p>
+      <p class="contact-text">
+        <a class="contact-us" href="mailto:elliswinos@yahoo.com"> Contact Us </a>
       </p>
     </div>
     
@@ -827,7 +800,7 @@
       </footer>
 
       <!-- <script src="js/skip-content.js"></script> -->      
-      <!-- <script src="js/sticky-nav.js"></script> -->
+      <script src="js/sticky-nav.js"></script> 
       <!-- <script src="js/vendor/single-page-nav.js"></script> -->
       <script src="js/makeplay-global.js"></script>
       <script src="js/image-grid.js"></script>
