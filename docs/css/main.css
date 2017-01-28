@@ -1030,7 +1030,7 @@ input[type=checkbox]:checked ~ [for="prints"] span:last-of-type {
 	width: 100%;
     float: left;
     overflow: hidden;
-    padding: 100px 40px;
+    padding: 100px 300px;
     z-index: 10000;
     text-align: center;
     border-top: solid 1px #ffffff;
@@ -1379,8 +1379,8 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 		display: none;
 	}
 
-	.variable-slider {
-		class="variable slider
+	.slider {
+		display: none;
 	}
 }
 
