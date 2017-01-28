@@ -1333,13 +1333,6 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
   		padding-left: 0px;
   	}
 
-  	.nav-right{
-  		float: right;
-  		font-size: 16px;
-  		text-align: center;
-  		padding-left: 0px;
-  	}
-
   	#input {
 		position: absolute;
 		top: 0;
@@ -1384,6 +1377,10 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 
 	.image-text {
 		display: none;
+	}
+
+	.variable-slider {
+		class="variable slider
 	}
 }
 
