@@ -22,6 +22,36 @@
     <script src="js/vendor/slideshow/jssor.js"></script>
     <script src="js/vendor/slideshow/jssor.slider.js"></script>
     <script src="js/vendor/slideshow/jquery.js"></script>
+
+    <!-- slideshow start -->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.slides.min.js"></script>
+    <script>
+      $(function() {
+        $('#slides').slidesjs({
+          width: 940,
+          height: 528,
+          navigation: {
+            effect: "fade"
+          },
+          pagination: {
+            effect: "fade"
+          },
+          effect: {
+            fade: {
+              speed: 400
+            }
+          },
+          play: {
+            active: true,
+            auto: true,
+            interval: 4000,
+            effect: "fade"
+          }
+        });
+      });
+    </script>
+    <!-- slideshow end -->
     
     <!--script src='https://www.google.com/recaptcha/api.js'></script>-->
     
@@ -29,58 +59,18 @@
   <body>
     <div id="home" tabindex="-1">
       <div class="skip-content"> <a href="#activities">start  <span class="hash">#</span>makingplay </a> </div>
-
-
-    <!-- Jssor Slider Begin -->
-      <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; ">
-
-        <!-- Loading Screen 
-        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
-            </div>
-            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
-                top: 0px; left: 0px;width: 100%;height:100%;">
-            </div>
-        </div> -->
-
-        <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px; overflow: hidden;">
-            <div>
-                <img u="image" src="img/landing/cup.jpg"/>
-            </div>
-            <div>
-                <img u="image" src="img/landing/clips.jpg" />
-            </div>
-            <div>
-                <img u="image" src="img/landing/box.jpg" />
-            </div>
-            <div>
-                <img u="image" src="img/landing/can.jpg" />
-            </div>
-            <div>
-                <img u="image" src="img/landing/tape.jpg" />
-            </div>
-            <div>
-                <img u="image" src="img/landing/bands.jpg" />
-            </div>
-            <div>
-                <img u="image" src="img/landing/roll.jpg" />
-            </div>
-        </div>
-
-    <!-- Arrow Navigator Skin Begin -->
-      
-          <!-- Arrow Left -->
-          <span u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 123px; left: 8px;">
-          </span>
-          <!-- Arrow Right -->
-          <span u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px">
-          </span>
-          <!-- Arrow Navigator Skin End -->
-          
+      <!-- Jssor Slider Begin -->
+      <div class="container">
+          <div id="slides">
+              <img src="img/landing/cup_small.jpg">
+              <img src="img/landing/clips.jpg">
+              <img src="img/landing/box.jpg">
+              <img src="img/landing/can.jpg">
+              <img src="img/landing/tape.jpg">
+              <img src="img/landing/bands.jpg">
+              <img src="img/landing/roll.jpg">
+          </div>
       </div>
-    </div>  
     <!-- ABOUT -->
     <div id="js-nav-anchor"></div>
     <nav id="js-main-nav" class="stick">
@@ -96,12 +86,10 @@
           </div>
         </ul>-->
         <div class="clearfix"></div>
-      </nav>
-      <div class="about-container">
+    </nav>
+    <div class="about-container">
       <div role="about" id="about" tabindex="-1">
         <article> 
-          <input type="checkbox" id="read_more" role="button">
-            <label for="read_more"><span>Learn more</span><span>Read less</span></label> 
           <section>
             <p>
               <span class="hash">#</span>makeplay provides activities for busy parents with projects that encourage creativity, self-directed play and learning. </br>
@@ -118,14 +106,15 @@
             <p>
               For more information on the topic of screen technology and child cognitive development <a href="#resources">click here.</a> 
             </p>
+            <input type="checkbox" id="read_more" role="button">
+            <label for="read_more"><span>Learn more</span><span>Read less</span>
+            </label> -->
           </section>
         </article>
       </div>
-
-    </div>
-     <div id="filters-section-wrap">
+      <div id="filters-section-wrap">
         <div class="panel-group" id="accordion">
-        <div id="filters-collapse" class="panel-collapse collapse in">
+          <div id="filters-collapse" class="panel-collapse collapse in">
                 <div class="filters">
                     <div class="col span_1_of_3 filter-group">
                       <h1> setup </h1>
@@ -141,7 +130,7 @@
                         <span class="filter-option" data-filter=".location-outdoor">outdoor</span>
                         <span class="filter-option" data-filter=".location-travel">travel</span>
                         <span class="filter-option" data-filter=".location-waiting">waiting</span>
-                    </div>
+                      </div>
                     </div>
                     <div class="col span_3_of_3 filter-group">
                       <h1> age </h1>
@@ -149,18 +138,16 @@
                       <span class="filter-option" data-filter=".age-1-2">1-2</span> 
                       <span class="filter-option" data-filter=".age-3-5">3-5</span> 
                       <span class="filter-option" data-filter=".age-6-8">6-8</span> 
-                   </div>
+                    </div>
                 </div>
-              </div>
-            </div>
           </div>
-
-    <div id="js-filters-section-wrap-sizer"></div>
-
+        </div>
+      </div>
+      <div id="js-filters-section-wrap-sizer"></div>
+    </div>
     <!-- MENU -->
-    
     <!-- PRINT SECTION -->
-   <!--  <p>
+    <!--  <p>
         <a class="print">Print here</a>
     </p>
     <div class="printable">
@@ -172,534 +159,498 @@
         </p>
     </div> -->
     <!-- END PRINT SECTION -->
-
     <!-- IMAGE GRID -->    
-
     <div class="item-grid-wrap" id="projects">
-    <div role="main" id="activities">
-      <p class="no-content"> Sorry we could not find anything with those results. </p>
-      <div class="item-grid-container">
-        <div class="item-grid-sizer"></div> 
-             <!-- ITEM 1 -->
-              <div class="item-grid setup-planned location-indoor age-1-2" id="project-slot-machine">
-                    <a class="item-wrap js-link" href="projects/slot-machine.html">
-                      <img src="img/act/activity-small/slot-machine.jpg" alt="slot-machine">
-                      <span class="image-text">
-                        <span class="image-text-inner">
-                          <span class="activity-title"> Slot Machine </span>
-                          <span class="filter-text"> Set up: Planned </span>
-                          <span class="filter-text"> Location: Indoor </span>
-                          <span class="filter-text"> Age: 1-2 </span>
+      <div role="main" id="activities">
+        <p class="no-content"> Sorry we could not find anything with those results. </p>
+        <div class="item-grid-container">
+          <div class="item-grid-sizer"></div> 
+               <!-- ITEM 1 -->
+                <div class="item-grid setup-planned location-indoor age-1-2" id="project-slot-machine">
+                      <a class="item-wrap js-link" href="projects/slot-machine.html">
+                        <img src="img/act/activity-small/slot-machine.jpg" alt="slot-machine">
+                        <span class="image-text">
+                          <span class="image-text-inner">
+                            <span class="activity-title"> Slot Machine </span>
+                            <span class="filter-text"> Set up: Planned </span>
+                            <span class="filter-text"> Location: Indoor </span>
+                            <span class="filter-text"> Age: 1-2 </span>
+                          </span>
                         </span>
-                      </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"></div>
-              </div>
-
-              <!-- ITEM 2 -->
-              <div class="item-grid setup-improvised age-3-5 location-waiting location-travel location-indoor" id="project-tracings">
-                      <a class="item-wrap js-link" href="projects/tracings.html">    
-                          <img src="img/act/activity-small/tracings.jpg" alt="tracings">
-                          <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Tracings </span>
-                                <span class="filter-text"> Set up: Improvised </span>
-                                <span class="filter-text"> Location: Waiting, Travel, Indoor </span>
-                                <span class="filter-text"> Age: 3-5 </span>
-                            </span>
-                          </span>
                       </a>
-                      <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 3 -->
-              <div class="item-grid setup-planned location-indoor location-outdoor location-travel age-6-8" id="project-musical-can">
-                <a class="item-wrap js-link" href="projects/musical-can.html">
-                  <img src="img/act/activity-small/cans.jpg" alt="can">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Musical Can </span>
-                                <span class="filter-text"> Set up: Planned </span>
-                                <span class="filter-text"> Location: Indoor, Outdoor, Travel </span>
-                                <span class="filter-text"> Age: 6-8 </span>
-                            </span>
-                          </span>
-                      </a>
-                      <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 4 -->
-              <div class="item-grid setup-planned age-6-8 location-indoor" id="project-mini-golf">
-                <a class="item-wrap js-link" href="projects/mini-golf.html">  
-                  <img src="img/act/activity-small/cap-golf.jpg" alt="mini-golf">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Mini Golf </span>
-                                <span class="filter-text"> Set up: Planned </span>
-                                <span class="filter-text"> Location: Indoor </span>
-                                <span class="filter-text"> Age: 6-8 </span>
-                            </span>
-                          </span>
-                      </a>
-                      <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 5 -->
-              <div class="item-grid age-3-4 location-indoor location-outdoor setup-planned" id="project-camera">
-                <a class="item-wrap js-link" href="projects/camera.html">    
-                  <img src="img/act/activity-small/camera.jpg" alt="camera-fun">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Camera Fun </span>
-                                <span class="filter-text"> Set up: Planned </span>
-                                <span class="filter-text"> Location: Indoor, Outdoor </span>
-                                <span class="filter-text"> Age: 6-8 </span>
-                            </span>
-                          </span>
-                      </a>
-                      <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 6 -->
-              <div class="item-grid age-6-8 location-waiting location-travel location-indoor setup-improvised" id="project-rubbings">
-                <a class="item-wrap js-link" href="projects/rubbings.html">
-                  <img src="img/act/activity-small/rubbings.jpg" alt="tape">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Rubbings </span>
-                                <span class="filter-text"> Set up: Improvised </span>
-                                <span class="filter-text"> Location: Waiting, Travel, Indoor </span>
-                                <span class="filter-text"> Age: 6-8 </span>
-                            </span>
-                          </span>
-                      </a>
-                      <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 7 -->
-       
-              <div class="item-grid age-3-5 age-6-8 location-waiting  location-indoor location-outdoor location-travel location-all setup-planned" id="project-guess-cards">
-                <a class="item-wrap js-link" href="projects/guess-cards.html"> 
-                  <img src="img/act/activity-small/cards.jpg" alt="cards">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Guess Cards </span>
-                                <span class="filter-text"> Set up: Planned </span>
-                                <span class="filter-text"> Location: All </span>
-                                <span class="filter-text"> Age: 3-5, 6-8 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 8 -->
-              <div class="item-grid age-6-8 set-up-planned location-indoor" id="project-castle">
-                <a class="item-wrap js-link" href="projects/infinite-castle.html"> 
-                  <img src="img/act/activity-small/castle.jpg" alt="castle">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Infinite Castle </span>
-                                <span class="filter-text"> Set up: Planned</span>
-                                <span class="filter-text"> Location: Indoor </span>
-                                <span class="filter-text"> Age: 6-8 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 9 -->
-              <div class="item-grid setup-planned location-indoor age-1-2 age-3-5" id="project-make-a-stack">
-                <a class="item-wrap js-link" href="projects/make-a-stack.html">
-                  <img src="img/act/activity-small/egg-sculp.jpg" alt="slot-machine">
-                  <span class="image-text">
-                    <span class="image-text-inner">
-                      <span class="activity-title"> Make a Stack </span>
-                      <span class="filter-text"> Set up: Planned </span>
-                      <span class="filter-text"> Location: Indoor </span>
-                      <span class="filter-text"> Age: 1-2, 3-5 </span>
-                    </span>
-                  </span>
-                </a>
                       <div class="item-description-wrap js-insert-item-description"></div>
-              </div>
-
-              <!-- ITEM 10 -->
-              <div class="item-grid setup-planned age-6-8 location-indoor location-travel location-waiting location-outdoor location-all" id="project-cereal-sculp">
-                      <a class="item-wrap js-link" href="projects/cereal-sculpture.html">    
-                          <img src="img/act/activity-small/cereal-sculp.jpg" alt="tracings">
-                          <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Cereal Sculpture </span>
-                                <span class="filter-text"> Set up: Planned </span>
-                                <span class="filter-text"> Location: All </span>
-                                <span class="filter-text"> Age: 6-8 </span>
+                </div>
+                <!-- ITEM 2 -->
+                <div class="item-grid setup-improvised age-3-5 location-waiting location-travel location-indoor" id="project-tracings">
+                        <a class="item-wrap js-link" href="projects/tracings.html">    
+                            <img src="img/act/activity-small/tracings.jpg" alt="tracings">
+                            <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Tracings </span>
+                                  <span class="filter-text"> Set up: Improvised </span>
+                                  <span class="filter-text"> Location: Waiting, Travel, Indoor </span>
+                                  <span class="filter-text"> Age: 3-5 </span>
+                              </span>
                             </span>
-                          </span>
+                        </a>
+                        <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 3 -->
+                <div class="item-grid setup-planned location-indoor location-outdoor location-travel age-6-8" id="project-musical-can">
+                  <a class="item-wrap js-link" href="projects/musical-can.html">
+                    <img src="img/act/activity-small/cans.jpg" alt="can">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Musical Can </span>
+                                  <span class="filter-text"> Set up: Planned </span>
+                                  <span class="filter-text"> Location: Indoor, Outdoor, Travel </span>
+                                  <span class="filter-text"> Age: 6-8 </span>
+                              </span>
+                            </span>
+                        </a>
+                        <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 4 -->
+                <div class="item-grid setup-planned age-6-8 location-indoor" id="project-mini-golf">
+                  <a class="item-wrap js-link" href="projects/mini-golf.html">  
+                    <img src="img/act/activity-small/cap-golf.jpg" alt="mini-golf">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Mini Golf </span>
+                                  <span class="filter-text"> Set up: Planned </span>
+                                  <span class="filter-text"> Location: Indoor </span>
+                                  <span class="filter-text"> Age: 6-8 </span>
+                              </span>
+                            </span>
+                        </a>
+                        <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 5 -->
+                <div class="item-grid age-3-4 location-indoor location-outdoor setup-planned" id="project-camera">
+                  <a class="item-wrap js-link" href="projects/camera.html">    
+                    <img src="img/act/activity-small/camera.jpg" alt="camera-fun">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Camera Fun </span>
+                                  <span class="filter-text"> Set up: Planned </span>
+                                  <span class="filter-text"> Location: Indoor, Outdoor </span>
+                                  <span class="filter-text"> Age: 6-8 </span>
+                              </span>
+                            </span>
+                        </a>
+                        <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 6 -->
+                <div class="item-grid age-6-8 location-waiting location-travel location-indoor setup-improvised" id="project-rubbings">
+                  <a class="item-wrap js-link" href="projects/rubbings.html">
+                    <img src="img/act/activity-small/rubbings.jpg" alt="tape">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Rubbings </span>
+                                  <span class="filter-text"> Set up: Improvised </span>
+                                  <span class="filter-text"> Location: Waiting, Travel, Indoor </span>
+                                  <span class="filter-text"> Age: 6-8 </span>
+                              </span>
+                            </span>
+                        </a>
+                        <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 7 -->
+                <div class="item-grid age-3-5 age-6-8 location-waiting  location-indoor location-outdoor location-travel location-all setup-planned" id="project-guess-cards">
+                  <a class="item-wrap js-link" href="projects/guess-cards.html"> 
+                    <img src="img/act/activity-small/cards.jpg" alt="cards">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Guess Cards </span>
+                                  <span class="filter-text"> Set up: Planned </span>
+                                  <span class="filter-text"> Location: All </span>
+                                  <span class="filter-text"> Age: 3-5, 6-8 </span>
+                              </span>
+                            </span>
                       </a>
                       <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 12 -->
-              <div class="item-grid setup-improvised location-all location-indoor location-outdoor location-travel location-waiting age-3-5 age-6-8" id="cereal-puzzle">
-                <a class="item-wrap js-link" href="projects/cereal-puzzle.html">    
-                  <img src="img/act/activity-small/cereal-puzzle.jpg" alt="cereal-puzzle">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Cereal Puzzle </span>
-                                <span class="filter-text"> Set up: Planned </span>
-                                <span class="filter-text"> Location: All </span>
-                                <span class="filter-text"> Age: 3-5, 6-8 </span>
+                </div>
+                <!-- ITEM 8 -->
+                <div class="item-grid age-6-8 set-up-planned location-indoor" id="project-castle">
+                  <a class="item-wrap js-link" href="projects/infinite-castle.html"> 
+                    <img src="img/act/activity-small/castle.jpg" alt="castle">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Infinite Castle </span>
+                                  <span class="filter-text"> Set up: Planned</span>
+                                  <span class="filter-text"> Location: Indoor </span>
+                                  <span class="filter-text"> Age: 6-8 </span>
+                              </span>
                             </span>
-                          </span>
                       </a>
                       <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 13 -->
-              <div class="item-grid setup-planned location-travel location-waiting" id="project-abicus">
-                <a class="item-wrap js-link" href="projects/abicus.html">  
-                  <img src="img/act/activity-small/abicus.jpg" alt="abicus">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Abicus </span>
-                                <span class="filter-text"> Set up: Planned </span>
-                                <span class="filter-text"> Location: Travel, Waiting </span>
-                                <span class="filter-text"> Age: All </span>
-                            </span>
-                          </span>
-                      </a>
-                      <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 14 -->
-              <div class="item-grid age-3-5 age-6-8 location-indoor setup-planned" id="project-box-slide">
-                <a class="item-wrap js-link" href="projects/coin-slider.html">    
-                  <img src="img/act/activity-small/box-slide.jpg" alt="camera">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Coin slider </span>
-                                <span class="filter-text"> Set up: Planned </span>
-                                <span class="filter-text"> Location: Indoor </span>
-                                <span class="filter-text"> Age: 3-5, 6-8 </span>
-                            </span>
-                          </span>
-                      </a>
-                      <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 15 -->
-              <div class="item-grid age-6-8 location-travel location-waiting location-indoor setup-improvised" id="project-origami">
-                <a class="item-wrap js-link" href="projects/napkin-origami.html">
-                  <img src="img/act/activity-small/origami.jpg" alt="tape">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Napkin Origami </span>
-                                <span class="filter-text"> Set up: Improvised </span>
-                                <span class="filter-text"> Location: Travel, Waiting, Indoor  </span>
-                                <span class="filter-text"> Age: 6-8 </span>
-                            </span>
-                          </span>
-                      </a>
-                      <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 16 -->
-       
-              <div class="item-grid age-3-5 age-6-8 location-indoor setup-planned">
-                <a class="item-wrap js-link" href="projects/pasta-necklace.html"> 
-                  <img src="img/act/activity-small/pasta-necklace.jpg" alt="pasta-necklace">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Pasta Necklace </span>
-                                <span class="filter-text"> Set up: Planned</span>
-                                <span class="filter-text"> Location: Indoor</span>
-                                <span class="filter-text"> Age: 3-5, 6-8 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 17 -->
-              <div class="item-grid age-3-5 age-6-8 location-indoor set-up-planned" id="project-puppet-show">
-                <a class="item-wrap js-link" href="projects/puppet-show.html"> 
-                  <img src="img/act/activity-small/puppet-show.jpg" alt="puppet-show">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Puppet Show </span>
-                                <span class="filter-text"> Set up: Planned</span>
-                                <span class="filter-text"> Location: Indoor </span>
-                                <span class="filter-text"> Age: 3-5, 6-8 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 18 -->
-              <div class="item-grid age-1-2 age-3-5 location-indoor set-up-Planned" id="project-object-sorting">
-                <a class="item-wrap js-link" href="projects/object-sorting.html"> 
-                  <img src="img/act/activity-small/object-sorting.jpg" alt="object-sorting">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Object Sorting </span>
-                                <span class="filter-text"> Set up: Planned</span>
-                                <span class="filter-text"> Location: Indoor </span>
-                                <span class="filter-text"> Age: 1-2, 3-5 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 19 -->
-              <div class="item-grid age-3-5 age-6-8 set-up-planned location-all location-indoor location-outdoor location-travel location-waiting" id="project-velcro-sticks">
-                <a class="item-wrap js-link" href="projects/velcro-sticks.html"> 
-                  <img src="img/act/activity-small/velcro-sticks.jpg" alt="velcro-sticks">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Velcro Sticks </span>
-                                <span class="filter-text"> Set up: Planned</span>
-                                <span class="filter-text"> Location: All </span>
-                                <span class="filter-text"> Age: 3-5, 6-8 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 20 -->
-              <div class="item-grid age-6-8 location-all location-indoor location-outdoor location-travel location-waiting setup-improvised" id="project-pick-a-stick">
-                <a class="item-wrap js-link" href="projects/abicus.html"> 
-                  <img src="img/act/activity-small/pick-a-stick.jpg" alt="pick-a-stick">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Pick a Stick </span>
-                                <span class="filter-text"> Set up: Improvised</span>
-                                <span class="filter-text"> Location: All </span>
-                                <span class="filter-text"> Age: 6-8 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-              
-              <!-- ITEM 21 -->
-              <div class="item-grid age-3-5 location-indoor set-up-planned" id="project-doll-house">
-                <a class="item-wrap js-link" href="projects/doll-house.html"> 
-                  <img src="img/act/activity-small/doll-house.jpg" alt="doll-house">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Doll House </span>
-                                <span class="filter-text"> Set up: Planned</span>
-                                <span class="filter-text"> Location: Indoor </span>
-                                <span class="filter-text"> Age: 3-5, 6-8 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 22 -->
-              <div class="item-grid age-6-8 location-indoor location-travel location-waiting setup-planned" id="project-geoboard">
-                <a class="item-wrap js-link" href="projects/geoboard.html"> 
-                  <img src="img/act/activity-small/geoboard.jpg" alt="geoboard">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Geoboard </span>
-                                <span class="filter-text"> Set up: Planned</span>
-                                <span class="filter-text"> Location: Indoor, Travel, Waiting </span>
-                                <span class="filter-text"> Age: 6-8 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 23 -->
-              <div class="item-grid age-1-2 age-3-5 age-6-8 location-indoor setup-planned" id="project-bottle-trickle">
-                <a class="item-wrap js-link" href="projects/bottle-trickle-down.html"> 
-                  <img src="img/act/activity-small/bottle-trickle.jpg" alt="bottle-trickle-down">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Bottle Trickle Down </span>
-                                <span class="filter-text"> Set up: Planned</span>
-                                <span class="filter-text"> Location: Indoor </span>
-                                <span class="filter-text"> Age: All </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 24 -->
-              <div class="item-grid age-6-8 location-waiting location-travel location-indoor setup-planned" id="project-magnet-fun">
-                <a class="item-wrap js-link" href="projects/magnet-fun.html"> 
-                  <img src="img/act/activity-small/clips.jpg" alt="magnet fun">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Magnet Fun </span>
-                                <span class="filter-text"> Set up: Planned</span>
-                                <span class="filter-text"> Location: Waiting, Travel, Indoor </span>
-                                <span class="filter-text"> Age: 6-8 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 25 -->
-              <div class="item-grid age-6-8 setup-planned location-indoor" id="cardboard-necklace">
-                <a class="item-wrap js-link" href="projects/cardboard-necklace.html"> 
-                  <img src="img/act/activity-small/cardboard-necklace.jpg" alt="cardboard-necklace">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Cardboard Necklace </span>
-                                <span class="filter-text"> Set up: Planned</span>
-                                <span class="filter-text"> Location: Indoor </span>
-                                <span class="filter-text"> Age: 6-8 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 26 -->
-              <div class="item-grid age-6-8 location-waiting location-travel location-indoor location-outdoor location-all setup-improvised" id="project-tic">
-                <a class="item-wrap js-link" href="projects/tic-tac-toe.html"> 
-                  <img src="img/act/activity-small/tic-tac-toe.jpg" alt="tic-tac-toe">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Tic Tac Toe </span>
-                                <span class="filter-text"> Set up: Improvised </span>
-                                <span class="filter-text"> Location: All </span>
-                                <span class="filter-text"> Age: 6-8 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 27 -->
-              <div class="item-grid age-6-8 location-indoor location-outdoor setup-planned" id="project-catch-the-ball">
-                <a class="item-wrap js-link" href="projects/catch-the-ball.html"> 
-                  <img src="img/act/activity-small/catch-the-ball.jpg" alt="catch-the-ball">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Catch the Ball </span>
-                                <span class="filter-text"> Set up: Planned</span>
-                                <span class="filter-text"> Location: Indoor, Outdoor</span>
-                                <span class="filter-text"> Age: 6-8 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 28 -->
-              <div class="item-grid age-1-2 location-indoor location-outdoor location-travel location-waiting location-all setup-planned" id="project-musical-rattles">
-                <a class="item-wrap js-link" href="projects/musical-rattles.html"> 
-                  <img src="img/act/activity-small/musical-rattles.jpg" alt="musical-rattles">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Musical Rattles </span>
-                                <span class="filter-text"> Set up: Planned </span>
-                                <span class="filter-text"> Location: All </span>
-                                <span class="filter-text"> Age: 1-2 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 29 -->
-              <div class="item-grid age-3-5 location-indoor location-waiting setup-improvised" id="project-musical-bottles">
-                <a class="item-wrap js-link" href="projects/musical-bottles.html"> 
-                  <img src="img/act/activity-small/musical-bottles.jpg" alt="musical-bottles">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Musical Bottles </span>
-                                <span class="filter-text"> Set up: Improvised </span>
-                                <span class="filter-text"> Location: Indoor, Waiting </span>
-                                <span class="filter-text"> Age: 3-5 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 29 -->
-              <div class="item-grid age-6-8 location-indoor location-outdoor location-travel location-waiting location-all setup-planned" id="project-slider-cup">
-                <a class="item-wrap js-link" href="projects/slider-cup.html"> 
-                  <img src="img/act/activity-small/cups.jpg" alt="slider-cups">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Slider Cup Maze </span>
-                                <span class="filter-text"> Set up: Planned</span>
-                                <span class="filter-text"> Location: All </span>
-                                <span class="filter-text"> Age: 6-8 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 30 -->
-              <div class="item-grid age-6-8 location-indoor location-outdoor location-travel location-waiting location-all setup-planned" id="project-cup-guitar">
-                <a class="item-wrap js-link" href="projects/cup-guitar.html"> 
-                  <img src="img/act/activity-small/cup-guitar.jpg" alt="tic-tac-toe">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Cup Guitar </span>
-                                <span class="filter-text"> Set up: Planned</span>
-                                <span class="filter-text"> Location: All </span>
-                                <span class="filter-text"> Age: 6-8 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-                
-              <!-- ITEM 31 -->
-              <div class="item-grid age-6-8 location-indoor location-outdoor setup-planned" id="bean-bag-catch">
-                <a class="item-wrap js-link" href="projects/bean-bag-catch.html"> 
-                  <img src="img/act/activity-small/water-bottle-catch.jpg" alt="bean-bag-catch">
-                  <span class="image-text">
-                            <span class="image-text-inner">
-                                <span class="activity-title"> Bean Bag Catch </span>
-                                <span class="filter-text"> Set up: Planned </span>
-                                <span class="filter-text"> Location: Indoor, Outdoor </span>
-                                <span class="filter-text"> Age: 6-8 </span>
-                            </span>
-                          </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"> </div> 
-              </div>
-
-              <!-- ITEM 32 -->
-              <div class="item-grid setup-planned location-indoor location-outdoor location-travel location-waiting location-all age-6-8" id="project-catch-the-ring">
-                    <a class="item-wrap js-link" href="projects/catch-the-ring.html">
-                      <img src="img/act/activity-small/catch-the-ring.jpg" alt="catch-the-ring">
-                      <span class="image-text">
-                        <span class="image-text-inner">
-                          <span class="activity-title"> Catch The Ring </span>
-                          <span class="filter-text"> Set up: Planned </span>
-                          <span class="filter-text"> Location: All </span>
-                          <span class="filter-text"> Age: 6-8 </span>
-                        </span>
+                </div>
+                <!-- ITEM 9 -->
+                <div class="item-grid setup-planned location-indoor age-1-2 age-3-5" id="project-make-a-stack">
+                  <a class="item-wrap js-link" href="projects/make-a-stack.html">
+                    <img src="img/act/activity-small/egg-sculp.jpg" alt="slot-machine">
+                    <span class="image-text">
+                      <span class="image-text-inner">
+                        <span class="activity-title"> Make a Stack </span>
+                        <span class="filter-text"> Set up: Planned </span>
+                        <span class="filter-text"> Location: Indoor </span>
+                        <span class="filter-text"> Age: 1-2, 3-5 </span>
                       </span>
-                    </a>
-                    <div class="item-description-wrap js-insert-item-description"></div>
-              </div>
-            </div>
-        </div>
-            <!-- ./ grid-container -->
-        <div class="clearfix"></div>
-        </div>
+                    </span>
+                  </a>
+                        <div class="item-description-wrap js-insert-item-description"></div>
+                </div>
+                <!-- ITEM 10 -->
+                <div class="item-grid setup-planned age-6-8 location-indoor location-travel location-waiting location-outdoor location-all" id="project-cereal-sculp">
+                        <a class="item-wrap js-link" href="projects/cereal-sculpture.html">    
+                            <img src="img/act/activity-small/cereal-sculp.jpg" alt="tracings">
+                            <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Cereal Sculpture </span>
+                                  <span class="filter-text"> Set up: Planned </span>
+                                  <span class="filter-text"> Location: All </span>
+                                  <span class="filter-text"> Age: 6-8 </span>
+                              </span>
+                            </span>
+                        </a>
+                        <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 12 -->
+                <div class="item-grid setup-improvised location-all location-indoor location-outdoor location-travel location-waiting age-3-5 age-6-8" id="cereal-puzzle">
+                  <a class="item-wrap js-link" href="projects/cereal-puzzle.html">    
+                    <img src="img/act/activity-small/cereal-puzzle.jpg" alt="cereal-puzzle">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Cereal Puzzle </span>
+                                  <span class="filter-text"> Set up: Planned </span>
+                                  <span class="filter-text"> Location: All </span>
+                                  <span class="filter-text"> Age: 3-5, 6-8 </span>
+                              </span>
+                            </span>
+                        </a>
+                        <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 13 -->
+                <div class="item-grid setup-planned location-travel location-waiting" id="project-abicus">
+                  <a class="item-wrap js-link" href="projects/abicus.html">  
+                    <img src="img/act/activity-small/abicus.jpg" alt="abicus">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Abicus </span>
+                                  <span class="filter-text"> Set up: Planned </span>
+                                  <span class="filter-text"> Location: Travel, Waiting </span>
+                                  <span class="filter-text"> Age: All </span>
+                              </span>
+                            </span>
+                        </a>
+                        <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 14 -->
+                <div class="item-grid age-3-5 age-6-8 location-indoor setup-planned" id="project-box-slide">
+                  <a class="item-wrap js-link" href="projects/coin-slider.html">    
+                    <img src="img/act/activity-small/box-slide.jpg" alt="camera">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Coin slider </span>
+                                  <span class="filter-text"> Set up: Planned </span>
+                                  <span class="filter-text"> Location: Indoor </span>
+                                  <span class="filter-text"> Age: 3-5, 6-8 </span>
+                              </span>
+                            </span>
+                        </a>
+                        <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 15 -->
+                <div class="item-grid age-6-8 location-travel location-waiting location-indoor setup-improvised" id="project-origami">
+                  <a class="item-wrap js-link" href="projects/napkin-origami.html">
+                    <img src="img/act/activity-small/origami.jpg" alt="tape">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Napkin Origami </span>
+                                  <span class="filter-text"> Set up: Improvised </span>
+                                  <span class="filter-text"> Location: Travel, Waiting, Indoor  </span>
+                                  <span class="filter-text"> Age: 6-8 </span>
+                              </span>
+                            </span>
+                        </a>
+                        <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 16 -->
+                <div class="item-grid age-3-5 age-6-8 location-indoor setup-planned">
+                  <a class="item-wrap js-link" href="projects/pasta-necklace.html"> 
+                    <img src="img/act/activity-small/pasta-necklace.jpg" alt="pasta-necklace">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Pasta Necklace </span>
+                                  <span class="filter-text"> Set up: Planned</span>
+                                  <span class="filter-text"> Location: Indoor</span>
+                                  <span class="filter-text"> Age: 3-5, 6-8 </span>
+                              </span>
+                            </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 17 -->
+                <div class="item-grid age-3-5 age-6-8 location-indoor set-up-planned" id="project-puppet-show">
+                  <a class="item-wrap js-link" href="projects/puppet-show.html"> 
+                    <img src="img/act/activity-small/puppet-show.jpg" alt="puppet-show">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Puppet Show </span>
+                                  <span class="filter-text"> Set up: Planned</span>
+                                  <span class="filter-text"> Location: Indoor </span>
+                                  <span class="filter-text"> Age: 3-5, 6-8 </span>
+                              </span>
+                            </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 18 -->
+                <div class="item-grid age-1-2 age-3-5 location-indoor set-up-Planned" id="project-object-sorting">
+                  <a class="item-wrap js-link" href="projects/object-sorting.html"> 
+                    <img src="img/act/activity-small/object-sorting.jpg" alt="object-sorting">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Object Sorting </span>
+                                  <span class="filter-text"> Set up: Planned</span>
+                                  <span class="filter-text"> Location: Indoor </span>
+                                  <span class="filter-text"> Age: 1-2, 3-5 </span>
+                              </span>
+                            </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 19 -->
+                <div class="item-grid age-3-5 age-6-8 set-up-planned location-all location-indoor location-outdoor location-travel location-waiting" id="project-velcro-sticks">
+                  <a class="item-wrap js-link" href="projects/velcro-sticks.html"> 
+                    <img src="img/act/activity-small/velcro-sticks.jpg" alt="velcro-sticks">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Velcro Sticks </span>
+                                  <span class="filter-text"> Set up: Planned</span>
+                                  <span class="filter-text"> Location: All </span>
+                                  <span class="filter-text"> Age: 3-5, 6-8 </span>
+                              </span>
+                            </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 20 -->
+                <div class="item-grid age-6-8 location-all location-indoor location-outdoor location-travel location-waiting setup-improvised" id="project-pick-a-stick">
+                  <a class="item-wrap js-link" href="projects/abicus.html"> 
+                    <img src="img/act/activity-small/pick-a-stick.jpg" alt="pick-a-stick">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Pick a Stick </span>
+                                  <span class="filter-text"> Set up: Improvised</span>
+                                  <span class="filter-text"> Location: All </span>
+                                  <span class="filter-text"> Age: 6-8 </span>
+                              </span>
+                            </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 21 -->
+                <div class="item-grid age-3-5 location-indoor set-up-planned" id="project-doll-house">
+                  <a class="item-wrap js-link" href="projects/doll-house.html"> 
+                    <img src="img/act/activity-small/doll-house.jpg" alt="doll-house">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Doll House </span>
+                                  <span class="filter-text"> Set up: Planned</span>
+                                  <span class="filter-text"> Location: Indoor </span>
+                                  <span class="filter-text"> Age: 3-5, 6-8 </span>
+                              </span>
+                            </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 22 -->
+                <div class="item-grid age-6-8 location-indoor location-travel location-waiting setup-planned" id="project-geoboard">
+                  <a class="item-wrap js-link" href="projects/geoboard.html"> 
+                    <img src="img/act/activity-small/geoboard.jpg" alt="geoboard">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Geoboard </span>
+                                  <span class="filter-text"> Set up: Planned</span>
+                                  <span class="filter-text"> Location: Indoor, Travel, Waiting </span>
+                                  <span class="filter-text"> Age: 6-8 </span>
+                              </span>
+                            </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 23 -->
+                <div class="item-grid age-1-2 age-3-5 age-6-8 location-indoor setup-planned" id="project-bottle-trickle">
+                  <a class="item-wrap js-link" href="projects/bottle-trickle-down.html"> 
+                    <img src="img/act/activity-small/bottle-trickle.jpg" alt="bottle-trickle-down">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Bottle Trickle Down </span>
+                                  <span class="filter-text"> Set up: Planned</span>
+                                  <span class="filter-text"> Location: Indoor </span>
+                                  <span class="filter-text"> Age: All </span>
+                              </span>
+                            </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 24 -->
+                <div class="item-grid age-6-8 location-waiting location-travel location-indoor setup-planned" id="project-magnet-fun">
+                  <a class="item-wrap js-link" href="projects/magnet-fun.html"> 
+                    <img src="img/act/activity-small/clips.jpg" alt="magnet fun">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Magnet Fun </span>
+                                  <span class="filter-text"> Set up: Planned</span>
+                                  <span class="filter-text"> Location: Waiting, Travel, Indoor </span>
+                                  <span class="filter-text"> Age: 6-8 </span>
+                              </span>
+                            </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 25 -->
+                <div class="item-grid age-6-8 setup-planned location-indoor" id="cardboard-necklace">
+                  <a class="item-wrap js-link" href="projects/cardboard-necklace.html"> 
+                    <img src="img/act/activity-small/cardboard-necklace.jpg" alt="cardboard-necklace">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Cardboard Necklace </span>
+                                  <span class="filter-text"> Set up: Planned</span>
+                                  <span class="filter-text"> Location: Indoor </span>
+                                  <span class="filter-text"> Age: 6-8 </span>
+                              </span>
+                            </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 26 -->
+                <div class="item-grid age-6-8 location-waiting location-travel location-indoor location-outdoor location-all setup-improvised" id="project-tic">
+                  <a class="item-wrap js-link" href="projects/tic-tac-toe.html"> 
+                    <img src="img/act/activity-small/tic-tac-toe.jpg" alt="tic-tac-toe">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Tic Tac Toe </span>
+                                  <span class="filter-text"> Set up: Improvised </span>
+                                  <span class="filter-text"> Location: All </span>
+                                  <span class="filter-text"> Age: 6-8 </span>
+                              </span>
+                            </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 27 -->
+                <div class="item-grid age-6-8 location-indoor location-outdoor setup-planned" id="project-catch-the-ball">
+                  <a class="item-wrap js-link" href="projects/catch-the-ball.html"> 
+                    <img src="img/act/activity-small/catch-the-ball.jpg" alt="catch-the-ball">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Catch the Ball </span>
+                                  <span class="filter-text"> Set up: Planned</span>
+                                  <span class="filter-text"> Location: Indoor, Outdoor</span>
+                                  <span class="filter-text"> Age: 6-8 </span>
+                              </span>
+                            </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 28 -->
+                <div class="item-grid age-1-2 location-indoor location-outdoor location-travel location-waiting location-all setup-planned" id="project-musical-rattles">
+                  <a class="item-wrap js-link" href="projects/musical-rattles.html"> 
+                    <img src="img/act/activity-small/musical-rattles.jpg" alt="musical-rattles">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Musical Rattles </span>
+                                  <span class="filter-text"> Set up: Planned </span>
+                                  <span class="filter-text"> Location: All </span>
+                                  <span class="filter-text"> Age: 1-2 </span>
+                              </span>
+                            </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 29 -->
+                <div class="item-grid age-3-5 location-indoor location-waiting setup-improvised" id="project-musical-bottles">
+                  <a class="item-wrap js-link" href="projects/musical-bottles.html"> 
+                    <img src="img/act/activity-small/musical-bottles.jpg" alt="musical-bottles">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Musical Bottles </span>
+                                  <span class="filter-text"> Set up: Improvised </span>
+                                  <span class="filter-text"> Location: Indoor, Waiting </span>
+                                  <span class="filter-text"> Age: 3-5 </span>
+                              </span>
+                            </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 29 -->
+                <div class="item-grid age-6-8 location-indoor location-outdoor location-travel location-waiting location-all setup-planned" id="project-slider-cup">
+                  <a class="item-wrap js-link" href="projects/slider-cup.html"> 
+                    <img src="img/act/activity-small/cups.jpg" alt="slider-cups">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Slider Cup Maze </span>
+                                  <span class="filter-text"> Set up: Planned</span>
+                                  <span class="filter-text"> Location: All </span>
+                                  <span class="filter-text"> Age: 6-8 </span>
+                              </span>
+                            </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 30 -->
+                <div class="item-grid age-6-8 location-indoor location-outdoor location-travel location-waiting location-all setup-planned" id="project-cup-guitar">
+                  <a class="item-wrap js-link" href="projects/cup-guitar.html"> 
+                    <img src="img/act/activity-small/cup-guitar.jpg" alt="tic-tac-toe">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Cup Guitar </span>
+                                  <span class="filter-text"> Set up: Planned</span>
+                                  <span class="filter-text"> Location: All </span>
+                                  <span class="filter-text"> Age: 6-8 </span>
+                              </span>
+                            </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 31 -->
+                <div class="item-grid age-6-8 location-indoor location-outdoor setup-planned" id="bean-bag-catch">
+                  <a class="item-wrap js-link" href="projects/bean-bag-catch.html"> 
+                    <img src="img/act/activity-small/water-bottle-catch.jpg" alt="bean-bag-catch">
+                    <span class="image-text">
+                              <span class="image-text-inner">
+                                  <span class="activity-title"> Bean Bag Catch </span>
+                                  <span class="filter-text"> Set up: Planned </span>
+                                  <span class="filter-text"> Location: Indoor, Outdoor </span>
+                                  <span class="filter-text"> Age: 6-8 </span>
+                              </span>
+                            </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"> </div> 
+                </div>
+                <!-- ITEM 32 -->
+                <div class="item-grid setup-planned location-indoor location-outdoor location-travel location-waiting location-all age-6-8" id="project-catch-the-ring">
+                      <a class="item-wrap js-link" href="projects/catch-the-ring.html">
+                        <img src="img/act/activity-small/catch-the-ring.jpg" alt="catch-the-ring">
+                        <span class="image-text">
+                          <span class="image-text-inner">
+                            <span class="activity-title"> Catch The Ring </span>
+                            <span class="filter-text"> Set up: Planned </span>
+                            <span class="filter-text"> Location: All </span>
+                            <span class="filter-text"> Age: 6-8 </span>
+                          </span>
+                        </span>
+                      </a>
+                      <div class="item-description-wrap js-insert-item-description"></div>
+                </div>
+          </div>
+              <!-- ./ grid-container -->
+          <div class="clearfix"></div>
+          </div>
+      </div>
     </div>
-
     <!-- START RESOURCES -->
     <div id="resources">
             <article>
@@ -787,8 +738,6 @@
                   </p>
                   <p class="article-link"> read the publication <a href="http://stakeholders.ofcom.org.uk/market-data-research/other/research-publications/childrens/children-parents-oct-14/"> here </a>
                 </div>
-
-                
               </section>
             </article>
             <!-- <article>
