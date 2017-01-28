@@ -181,6 +181,11 @@ sub {
 
 img {
   border: 0;
+  outline: 0;
+}
+
+img:focus {
+  outline: 0;
 }
 
 /**

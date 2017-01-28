@@ -45,7 +45,7 @@
   -moz-box-sizing: border-box;   
   box-sizing: border-box;        
 }
-/* http://css-tricks.com/snippets/css/clear-fix/ */
+
 .clearfix {
   visibility: hidden;
   display: block;
@@ -71,18 +71,14 @@ a:hover, a:active {
 	text-decoration: underline;
 }
 
-#home:focus {
+#home:focus,
+#main:focus {
 	outline: 0;
 }
-
 
 #main {
 	position: relative;
 	width: 100%;
-}
-
-#main:focus{
-	outline: 0;
 }
 
 .main-nav-container {
@@ -799,57 +795,26 @@ ul.activity-text li{ text-indent:-5px; }
   opacity: 1;
 }
 
-/* SLIDESHOW NEW */
-    /* jssor slider arrow navigator skin 21 css */
-	            /*
-	            .jssora21l              (normal)
-	            .jssora21r              (normal)
-	            .jssora21l:hover        (normal mouseover)
-	            .jssora21r:hover        (normal mouseover)
-	            .jssora21ldn            (mousedown)
-	            .jssora21rdn            (mousedown)
-	            */
-	            .jssora21l, .jssora21r, .jssora21ldn, .jssora21rdn
-	            {
-	            	position: absolute;
-	            	cursor: pointer;
-	            	display: block;
-	                background: url(../img/arrows.svg) center center no-repeat;
-	                overflow: hidden;
-	                width: 50%;
-	            }
-	            .jssora21l { background-position: -3px -33px; }
-	            .jssora21r { background-position: -63px -33px; width:20px; }
-	            .jssora21l:hover { background-position: -123px -33px; }
-	            .jssora21r:hover { background-position: -183px -33px; }
-	            .jssora21ldn { background-position: -243px -33px; }
-	            .jssora21rdn { background-position: -303px -33px; }
+/* SLIDESHOW START */
+    .slider {
+    	width: 60%;
+     	margin: 0px auto;
+    }
 
-/* SLIDESHOW */
+    .slick-slide {
+    	margin: 0px 20px;
+    	outline: none;
+    }
 
-.slideshow-home{
- 	position: relative;
- 	width: 100%;
-}
-.slideshow-home figure{
-	position: absolute;
-	display: block;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	/* height: 590px; */
-	background: #000;
-	overflow: hidden;
-}
-.slideshow-home img{
-	display: block;
-	width: 100%;
-	height: auto;
-}
+    .slick-slide img {
+    	width: 100%;
+    }
 
-.slideshow-home figure{
-	opacity:0;
-}
+    .slick-prev:before,
+    .slick-next:before {
+        color: #fff;
+    }
+/* SLIDESHOW END */
 
 /* RESOURCES */
 
