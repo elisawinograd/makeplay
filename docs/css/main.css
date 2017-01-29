@@ -174,8 +174,6 @@ input:focus, textarea:focus {
 
 article {
     position: relative;
-    padding: 0 4.5%;
-    *zoom: 1;
 }
 
 article:before, article:after {
@@ -820,7 +818,7 @@ ul.activity-text li{ text-indent:-5px; }
 	width: 100%;
 	overflow: hidden;
 	z-index: 10000;
-	padding: 20px 0;
+	padding: 20px 0 40px 0px;
 }
 
 .resources-about {
@@ -860,13 +858,20 @@ ul.activity-text li{ text-indent:-5px; }
 	width: 100%;
 }
 
-/* ARTICLE LABLE */
+/* ARTICLE LABEL */
+.link-resources {
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    display: block;
+    margin-top: 20px;
+}
+
 
 [for="articles"] {
 	font-size: 20px;
-	width: 100%;
-	float: left;
-	text-align: center;
+    float: left;
+    padding-left: 46.4%;
+    text-align: center;
 }
 
 [for="articles"]:hover {
@@ -901,8 +906,7 @@ input[type=checkbox]:checked ~ [for="articles"] span:last-of-type {
 [for="publications"] {
 	float:left;
 	font-size: 20px;
-	width: 100%;
-	float: left;
+	padding-left: 45%;
 	text-align: center;
 }
 
@@ -933,104 +937,13 @@ input[type=checkbox]:checked ~ [for="publications"] span:last-of-type {
     visibility: visible;
 }
 
-/* 	PRINTS */
-
-.print-grid-wrap {
-	background-color: #E0E0E0;
-	float: left;
-	width: 100%;
-	padding: 30px 0;
-}
-
-/* HOVER */
-
-.print-wrap {
-	position: relative;
-	width: 100%;
-	float: left;
-}
-
-.print-grid {
-	float: left;
-	border-color: hsla(0, 0%, 0%, 0.7);
-	display: inline-block;
-	overflow: hidden;
-	border: solid 1px #ffffff;
-	width: 25%;
-	float:left;
-}
-
-.print-grid img {
-	width: 101%;
-	display: block;
-}
-
-.print-text {
-	font-family: 'rectaregular';
-	width: 25%;
-	oaverflow: hidden;
-	position: absolute;
-	background: rgba(0,0,0,0.5);
-	color: #ffffff;
-	cursor: pointer;
-	text-align: center;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	opacity: 0;
-}
-
-.print-text-inner {
-	width: 25%;
-}
-
-.print-text:hover {
-  opacity: 1;
-}
-
-[for="prints"] {
-	float:left;
-	font-size: 20px;
-	width: 100%;
-	float: left;
-	text-align: center;
-}
-
-[for="prints"]:hover {
-	text-decoration: underline;
-}
-
-[for="prints"] span:last-of-type {
-    display: none;
-    visibility: hidden;
-}
-
-input[type=checkbox]:checked ~ section {
-    display: block;
-    visibility: visible;
-    width: 100%;
-}
-
-input[type=checkbox]:checked ~ figure { width: 100% }
-
-input[type=checkbox]:checked ~ [for="prints"] span:first-of-type {
-    display: none;
-    visibility: hidden;
-}
-
-input[type=checkbox]:checked ~ [for="prints"] span:last-of-type {
-    display: block;
-    visibility: visible;
-}
-
 /* CONTACT AND AKNOLEDGEMENTS */
 
 #contact {
 	width: 100%;
     float: left;
     overflow: hidden;
-    padding: 100px 300px;
+    padding: 100px 300px 150px 300px;
     z-index: 10000;
     text-align: center;
     border-top: solid 1px #ffffff;
