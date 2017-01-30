@@ -71,6 +71,10 @@ a:hover, a:active {
 	text-decoration: underline;
 }
 
+#home {
+	padding-top: 20px;
+}
+
 #home:focus,
 #main:focus {
 	outline: 0;
@@ -108,19 +112,25 @@ a:hover, a:active {
 }
 
 .skip-content {
-	background-color: #f0f0f0;
-	font-family: 'rectaregular', helvetica, sans-serif;
-	text-align: center;
-	height: 50px;
-	padding-top: 1%;
-	z-index:10000;
+    font-family: 'rectaregular', helvetica, sans-serif;
+    text-align: center;
+    border: 1px solid #fff;
+    max-width: 200px;
+    padding: 5px 0;
+    margin: 0 auto;
 }
 
 .skip-content a {
 	font-size: 18px;
 }
 
+.skip-content:hover {
+	text-decoration: none;
+	background-color: #f6f6f6;
+}
+
 .skip-content a:hover {
+	text-decoration: none;
 }
 
 .skip-content a:focus {
@@ -138,6 +148,11 @@ input:focus, textarea:focus {
 	overflow: hidden;
 	padding: 20px 30px;
 	text-align: center;
+}
+
+.about-container article{
+	max-width: 900px;
+	margin:0 auto;
 }
 
 .about-container p {
@@ -387,24 +402,23 @@ ul.top-menu {
 .menu-item {
 	float: left;
 	padding-right: 20px;
-	font-size: 16px;
+	font-size: 18px;
 }
 
 .menu-items-next {
-	font-size: 16px;
+	font-size: 18px;
 }
 
 .menu-item-first {
 	float: left;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .menu-logo {
 }
 
 .logo{
-	padding: 1% 0 0 1%;
-	float: left;
+	font-family: 'rectamedium';
 }
 
 /* SEARCH BAR */
@@ -821,6 +835,11 @@ ul.activity-text li{ text-indent:-5px; }
 	padding: 20px 0 40px 0px;
 }
 
+#resources article{
+	max-width: 200px;
+	margin: 0 auto;
+}
+
 .resources-about {
 	font-size: 18px;
     text-align: center;
@@ -868,9 +887,7 @@ ul.activity-text li{ text-indent:-5px; }
 
 
 [for="articles"] {
-	font-size: 20px;
-    float: left;
-    padding-left: 46.4%;
+	font-size: 18px;
     text-align: center;
 }
 
@@ -904,9 +921,7 @@ input[type=checkbox]:checked ~ [for="articles"] span:last-of-type {
 /* PUBLICATIONS LABLE */
 
 [for="publications"] {
-	float:left;
-	font-size: 20px;
-	padding-left: 45%;
+	font-size: 18px;
 	text-align: center;
 }
 
@@ -940,13 +955,11 @@ input[type=checkbox]:checked ~ [for="publications"] span:last-of-type {
 /* CONTACT AND AKNOLEDGEMENTS */
 
 #contact {
-	width: 100%;
-    float: left;
-    overflow: hidden;
-    padding: 100px 300px 150px 300px;
-    z-index: 10000;
+	overflow: hidden;
     text-align: center;
     border-top: solid 1px #ffffff;
+    padding: 40px 0px;
+    margin-bottom: 40px;
 }
 
 #contact-area {
@@ -955,14 +968,19 @@ input[type=checkbox]:checked ~ [for="publications"] span:last-of-type {
 }
 
 .contact-text {
-	font-size: 16px;
-	padding-bottom: 10px;
+	font-size: 18px;
+    max-width: 900px;
+    margin: 0px auto;
+    padding-bottom: 20px;
 }
 
 .contact-us {
 	border: 1px solid #fff;
-    padding: 10px 30px;
     margin: 20px;
+    max-width: 200px;
+    margin: 0 auto;
+    font-size: 18px;
+    padding: 5px 0;
 }
 
 .contact-us:hover {
@@ -1094,7 +1112,7 @@ footer {
 }
 
 [for="categories"] {
-	font-size: 20px;
+	font-size: 18px;
 	float: left;
 	padding-left: 10px;
 }
@@ -1240,10 +1258,6 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
   	}
 
   	.categories{
-  		float: left;
-  		font-size: 16px;
-  		text-align: center;
-  		padding-left: 0px;
   	}
 
   	#input {
