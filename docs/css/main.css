@@ -829,8 +829,9 @@ ul.activity-text li{ text-indent:-5px; }
 /* RESOURCES */
 
 #resources {
-	width: 100%;
-	padding: 10px 0 40px 0px;
+    width: 100%;
+    padding: 20px 0 40px 0px;
+    float: left;
 }
 
 #resources article{
@@ -957,6 +958,8 @@ input[type=checkbox]:checked ~ [for="publications"] span:last-of-type {
     border-top: solid 1px #ffffff;
     padding: 40px 0px;
     margin-bottom: 40px;
+    float: left;
+    width: 100%;
 }
 
 #contact-area {
