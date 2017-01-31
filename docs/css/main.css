@@ -830,14 +830,10 @@ ul.activity-text li{ text-indent:-5px; }
 
 #resources {
 	width: 100%;
-	overflow: hidden;
-	z-index: 10000;
-	padding: 20px 0 40px 0px;
+	padding: 10px 0 40px 0px;
 }
 
 #resources article{
-	max-width: 200px;
-	margin: 0 auto;
 }
 
 .resources-about {
@@ -882,7 +878,8 @@ ul.activity-text li{ text-indent:-5px; }
     border: 1px solid #fff;
     padding: 5px 20px;
     display: block;
-    margin-top: 20px;
+    max-width: 200px;
+    margin: 10px auto;
 }
 
 
