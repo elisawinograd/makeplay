@@ -1260,6 +1260,29 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 		display:none;
 	}
 
+	.span_1_of_3,
+	.span_3_of_3 {
+		width: 33%; 
+		line-height: 33px;
+		padding: 5px;
+	}
+
+	.span_2_of_3 {
+		width: 33%; 
+		line-height: 33px;
+		border-left: 1px solid white;
+		border-right: 1px solid white;
+		padding: 5px;
+	}
+
+	.filters h1 {
+		font-size: 16px;
+	}
+
+	.menu-item.contact-menu {
+		display:none;
+	}
+
 	[for="read_more"] {
 		display: none;
 	}
@@ -1313,6 +1336,7 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 	
 	.filter-option {
 		width: 100%;
+		font-size: 14px;
 	}
 
 	.item-grid-sizer,
