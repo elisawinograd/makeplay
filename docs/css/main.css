@@ -350,7 +350,6 @@ nav.stick {
 #js-nav-anchor {
   width: 100%;
   display: none;
-  
 }
 
 
@@ -382,6 +381,15 @@ ul.top-menu {
 	list-style-type: none;
 }
 
+.nav-2 {
+	background-color: red;
+    float: left;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
 .sec-nav-container {
 	/*position: fixed;*/
 	z-index: 1;
@@ -403,6 +411,7 @@ ul.top-menu {
 	float: left;
 	padding-right: 20px;
 	font-size: 18px;
+	padding-top: 5px;
 }
 
 .menu-items-next {
@@ -1100,7 +1109,12 @@ footer {
 }
 
 .categories a {
-	color: #A9A9A9;
+    border: 1px solid #fff;
+    background-color: #fff;
+    padding: 5px;
+    width: 130px;
+    text-align: center;
+    margin-right: 10px;
 }
 
 .categories a.clicked {
@@ -1118,10 +1132,8 @@ footer {
 }
 
 [for="categories"]:hover {
-	text-decoration: underline;
+
 }
-
-
 
 input[type=checkbox]:checked ~ section {
     display: block;
@@ -1163,6 +1175,21 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 /*  TWO COLUMN */
 
 @media only screen and (max-width: 768px) {
+	nav {
+		display:none;
+	}
+
+	#js-main-nav {
+		display: none;
+	}
+
+	#filters-section-wrap {
+		display: none;
+	}
+
+	#js-filters-section-wrap-sizer {
+		display: none;
+	}
 
 	.activity-title {
 		font-size: 27px;
