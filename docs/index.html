@@ -37,11 +37,11 @@
     
   </head>
   <body>
-    <div id="home" tabindex="-1">
+    <!--<div id="home" tabindex="-1">
       <div class="skip-content"> 
         <a href="#activities"> View Activities </a> 
       </div>
-    </div>  
+    </div>  -->
     <section class="variable slider">
         <div>
           <img u="image" src="img/landing/cup_empty.jpg"/>
@@ -98,52 +98,91 @@
         </article>
       </div>
     </div>
-    <nav id="js-main-nav" class="stick">
+    <article id="main-nav">
+        <input type="checkbox" id="categories" role="button">
+        <a href="#activities" class="menu-item"> activities </a>      
+        <label for="categories">
+            <span class="menu-item">filters +</span>
+            <span class="menu-item">filters -</span>
+        </label> 
+        <a href="#resources" class="menu-item"> resources </a> 
+        <a href="mailto:makeplay.net@gmail.com" class="menu-item"> contact </a>  
+      <section>
+        <div class="filters">
+          <div class="col span_1_of_3 filter-group">
+            <h1> setup </h1>
+            <span class="filter-option js-active js-all"> all </span>  
+            <span class="filter-option" data-filter=".setup-improvised">improvised </span>
+            <span class="filter-option" data-filter=".setup-planned">planned </span>
+          </div>
+          <div class="col span_2_of_3 filter-group">
+            <h1> location </h1>
+            <div class="filter-menu">
+              <span class="filter-option js-active js-all">all</span> 
+              <span class="filter-option" data-filter=".location-indoor">indoor </span>
+              <span class="filter-option" data-filter=".location-outdoor">outdoor</span>
+              <span class="filter-option" data-filter=".location-travel">travel</span>
+              <span class="filter-option" data-filter=".location-waiting">waiting</span>
+            </div>
+          </div>
+          <div class="col span_3_of_3 filter-group">
+            <h1> age </h1>
+            <span class="filter-option js-active js-all">all</span> 
+            <span class="filter-option" data-filter=".age-1-2">1-2</span> 
+            <span class="filter-option" data-filter=".age-3-5">3-5</span> 
+            <span class="filter-option" data-filter=".age-6-8">6-8</span> 
+          </div>
+        </div>
+      </section>
+    </article>
+    <!--<nav id="js-main-nav" class="stick">
       <div class="clearfix"></div>
       <ul class="top-menu">
           <div class="menu-items-next">     
-            <!--<li> <a href="#about" class="menu-item"> about </a> </li>
-            <li> <a href="#activities" class="menu-item"> activities </a> </li>-->
             <li class="nav-right"> <a href="#resources" class="menu-item"> resources </a> </li>
-            <li class="nav-right"> <a href="mailto:makeplay.net@gmail.com" class="menu-item"> contact </a> </li>            
-            <li class="categories">
-                  <a class="js-category-toggler categories"> filter activities <span class="js-plus-minus">-</span></a> 
+            <li class="nav-right"> <a href="mailto:makeplay.net@gmail.com" class="menu-item"> contact </a> </li>
             </li>
+            <article>
+              <input type="checkbox" id="categories" role="button">
+              <label for="categories">
+                  <span class="link-filters">filters +</span>
+                  <span class="link-filters">filters -</span>
+              </label> 
+              <section>
+                <div id="filters-section-wrap">
+                        <div class="filters">
+                                <div class="col span_1_of_3 filter-group">
+                                  <h1> setup </h1>
+                                  <span class="filter-option js-active js-all"> all </span>  
+                                  <span class="filter-option" data-filter=".setup-improvised">improvised </span>
+                                  <span class="filter-option" data-filter=".setup-planned">planned </span>
+                                </div>
+                                <div class="col span_2_of_3 filter-group">
+                                  <h1> location </h1>
+                                  <div class="filter-menu">
+                                    <span class="filter-option js-active js-all">all</span> 
+                                    <span class="filter-option" data-filter=".location-indoor">indoor </span>
+                                    <span class="filter-option" data-filter=".location-outdoor">outdoor</span>
+                                    <span class="filter-option" data-filter=".location-travel">travel</span>
+                                    <span class="filter-option" data-filter=".location-waiting">waiting</span>
+                                  </div>
+                                </div>
+                                <div class="col span_3_of_3 filter-group">
+                                  <h1> age </h1>
+                                  <span class="filter-option js-active js-all">all</span> 
+                                  <span class="filter-option" data-filter=".age-1-2">1-2</span> 
+                                  <span class="filter-option" data-filter=".age-3-5">3-5</span> 
+                                  <span class="filter-option" data-filter=".age-6-8">6-8</span> 
+                               </div>
+                        </div>
+                </div>
+              </section>
+            </article>
           </div>
         </ul>
       <div class="clearfix"></div>
-    </nav>
-    <div id="filters-section-wrap">
-      <div class="panel-group" id="accordion">
-        <div id="filters-collapse" class="panel-collapse collapse in">
-                <div class="filters">
-                    <div class="col span_1_of_3 filter-group">
-                      <h1> setup </h1>
-                      <span class="filter-option js-active js-all"> all </span>  
-                      <span class="filter-option" data-filter=".setup-improvised">improvised </span>
-                      <span class="filter-option" data-filter=".setup-planned">planned </span>
-                    </div>
-                    <div class="col span_2_of_3 filter-group">
-                      <h1> location </h1>
-                      <div class="filter-menu">
-                        <span class="filter-option js-active js-all">all</span> 
-                        <span class="filter-option" data-filter=".location-indoor">indoor </span>
-                        <span class="filter-option" data-filter=".location-outdoor">outdoor</span>
-                        <span class="filter-option" data-filter=".location-travel">travel</span>
-                        <span class="filter-option" data-filter=".location-waiting">waiting</span>
-                      </div>
-                    </div>
-                    <div class="col span_3_of_3 filter-group">
-                      <h1> age </h1>
-                      <span class="filter-option js-active js-all">all</span> 
-                      <span class="filter-option" data-filter=".age-1-2">1-2</span> 
-                      <span class="filter-option" data-filter=".age-3-5">3-5</span> 
-                      <span class="filter-option" data-filter=".age-6-8">6-8</span> 
-                   </div>
-                </div>
-        </div>
-      </div>
-    </div>
+    </nav>-->
+    
 
     <!-- NAV FOR TABLET AND MOBILE 
     <div class="nav-2">  

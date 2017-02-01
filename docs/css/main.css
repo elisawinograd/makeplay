@@ -42,8 +42,8 @@
 
 *, *:before, *:after {
 	-webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;   
-  box-sizing: border-box;        
+	-moz-box-sizing: border-box;   
+	box-sizing: border-box;        
 }
 
 .clearfix {
@@ -286,11 +286,20 @@ input[type=checkbox]:checked ~ [for="read_more"] span:last-of-type {
 	border-bottom: solid 1px #ffffff;
 }
 
+article#main-nav {
+	background-color: #f0f0f0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index:1000;
+}
+
 #filters-section-wrap {
   background-color: rgba(224,224,224, 0.9);
   background-color: #e0e0e0;  
   width: 100%;
 }
+
 #filters-section-wrap.js-fixed {
   position: fixed;
   z-index: 3000;
@@ -409,9 +418,8 @@ ul.top-menu {
 
 .menu-item {
 	float: left;
-	padding-right: 20px;
+	padding:5px 10px;
 	font-size: 18px;
-	padding-top: 5px;
 }
 
 .menu-items-next {
@@ -534,22 +542,12 @@ h1.hash{
 	padding: 0 1% 0 1%;
 }
 
-/*  GROUPING  */
-.filters:before,
-.filters:after {
-	content:"";
-	display:table;
-}
-
-.filters:after {
-	clear:both;
-}
-
+/*  FILTERS  */
 .filters {
-    width: 100%;
-    zoom:1; 
+	width: 100%;
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
+    float: left;
 }
 
 
@@ -561,9 +559,6 @@ h1.hash{
 	margin: 0;
 	padding: 0px 0px 10px 2px;
 }
-
-
-/*  FILTER GRID  */
 
 .span_1_of_3,
 .span_3_of_3 {
@@ -1050,11 +1045,11 @@ input.submit {
 /*  FOOTER */
 
 footer {
-	background-color: #f0f0f0;
 	position: fixed;
 	left: 0px;
 	bottom: 0px;
 	width: 100%;
+	padding: 0px 10px;
 }
 
 .share-icon {
@@ -1067,7 +1062,6 @@ footer {
 	float: left;
 	font-family: helvetica, sans-serif;
 	font-size: 12px;
-	padding: 0.3% 1% 0 1%;
 }
 
 .contact{
@@ -1103,6 +1097,39 @@ footer {
 }
 
 /* CATEGORIES LABLE */
+[for="categories"] {
+	font-size: 18px;
+    text-align: center;
+}
+
+[for="categories"]:hover {
+	text-decoration: underline;
+}
+
+[for="categories"] span:last-of-type {
+    display: none;
+    visibility: hidden;
+}
+
+input[type=checkbox]:checked ~ section {
+    display: block;
+    visibility: visible;
+    width: 100%;
+}
+
+input[type=checkbox]:checked ~ figure { 
+	width: 100% 
+}
+
+input[type=checkbox]:checked ~ [for="categories"] span:first-of-type {
+    display: none;
+    visibility: hidden;
+}
+
+input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
+    display: block;
+    visibility: visible;
+}
 
 .categories {
 	float: left;
@@ -1111,6 +1138,7 @@ footer {
 .categories a {
     border: 1px solid #fff;
     background-color: #fff;
+    color:red;
     padding: 5px;
     width: 130px;
     text-align: center;
@@ -1118,17 +1146,15 @@ footer {
 }
 
 .categories a.clicked {
-	color: #333;
 }
 
 .js-category-toggler .categories a{
-	color:blue;
+
 }
 
 [for="categories"] {
 	font-size: 18px;
 	float: left;
-	padding-left: 10px;
 }
 
 [for="categories"]:hover {
@@ -1141,7 +1167,9 @@ input[type=checkbox]:checked ~ section {
     width: 100%;
 }
 
-input[type=checkbox]:checked ~ figure { width: 100% }
+input[type=checkbox]:checked ~ figure { 
+	width: 100% 
+}
 
 input[type=checkbox]:checked ~ [for="categories"] span:first-of-type {
     display: none;
