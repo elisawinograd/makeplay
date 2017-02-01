@@ -1209,6 +1209,18 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 		display: none;
 	}
 
+	#js-main-nav {
+		display: none;
+	}
+
+	#filters-section-wrap {
+		display: none;
+	}
+
+	#js-filters-section-wrap-sizer {
+		display: none;
+	}
+
 	#read-more {
 		display:none;
 	}
