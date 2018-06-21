@@ -168,6 +168,10 @@ input:focus, textarea:focus {
 	outline: 0;
 }
 
+#about-mobile {
+	display: none;
+}
+
 .hash {
 	font-family: helvetica;
 }
@@ -292,6 +296,18 @@ article#main-nav {
     position: fixed;
     width: 100%;
     z-index:1000;
+}
+
+article#mobile-nav {
+	display: none;
+	/*background-color: #f0f0f0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index:1000;*/
+}
+
+.logo-nav {
 }
 
 #filters-section-wrap {
@@ -989,6 +1005,7 @@ input[type=checkbox]:checked ~ [for="publications"] span:last-of-type {
     margin: 0 auto;
     font-size: 18px;
     padding: 5px 0;
+    text-align: center;
 }
 
 .contact-us:hover {
@@ -1054,6 +1071,8 @@ footer {
 	bottom: 0px;
 	width: 100%;
 	padding: 0px 10px;
+	background-color: #f0f0f0;
+	margin-top: 20px;
 }
 
 .share-icon {
@@ -1260,6 +1279,39 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 /*  ONE COLUMN */
 
 @media only screen and (max-width: 500px) {
+	#about-mobile {
+	display: inline-block;
+}
+
+	article#mobile-nav {
+		display: block;
+    	background-color: #f0f0f0;
+    	top: 0;
+    	position: fixed;
+    	width: 100%;
+    	z-index: 1000;
+    	height: 40px;
+    	text-align: center;
+    	padding: 10px;
+    	font-size: 18px;
+	}
+
+	article#main-nav {
+		display: none;
+	}
+
+	#contact {
+		display: none;
+	}
+
+	#about {
+		display: none;
+	}
+
+	#resources {
+		display: none;
+	}
+
 	#home {
 		display:none;
 	}
