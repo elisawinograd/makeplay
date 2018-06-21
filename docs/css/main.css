@@ -1284,7 +1284,8 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 	#js-filters-section-wrap-sizer,
 	span.filter-text,
 	#js-main-nav,
-	span.activity-title  {
+	span.activity-title,
+	.no-content  {
 		display: none;
 	}
 
