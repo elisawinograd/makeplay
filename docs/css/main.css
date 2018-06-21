@@ -636,7 +636,6 @@ h1.hash{
 	border-color: hsla(0, 0%, 0%, 0.7);
 	display: inline-block;
 	overflow: hidden;
-	border: solid 1px #ffffff;
 	border-top:none;
 	border-right: none;
 }
@@ -652,6 +651,7 @@ h1.hash{
 	width: 100%;
 	float: left;
 	height: 100%;
+	border: 1px solid #fff;
 }
 
 .image-text {
@@ -666,7 +666,35 @@ h1.hash{
 	right: 0;
 	left: 0;
 	bottom: 0;
-	opacity: 0;
+	opacity:0;
+}
+
+.image-mobile {
+	display: none;
+	font-family: 'rectaregular';
+	width: 100%;
+	position: absolute;
+	/*background: rgba(0,0,0,0.5);*/
+	color: #ffffff;
+	cursor: pointer;
+	text-align: center;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.image-text-inner-mobile {
+	display:none;
+	position: absolute;
+    top: 40%;
+    left: 25%;
+    padding: 10px;
+    border: 1px solid #fff;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(0,0,0,0.2);
 }
 
 .image-text-inner {
@@ -683,6 +711,10 @@ h1.hash{
 
 .activity-title {
 	font-size: 22px;
+}
+
+.activity-details {
+	display:none;
 }
 
 /* SHARE LABLE */
@@ -1230,20 +1262,30 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 		display:none;
 	}
 
-	#js-main-nav {
-		display: none;
+	.image-text {
+    	font-size: 18px;
+	    background: none;
+	    opacity: 1;
 	}
 
-	#filters-section-wrap {
-		display: none;
+	.image-text-inner {
+	    width: auto;
+    	left: 24%;
+    	top: 90%;
 	}
 
-	#js-filters-section-wrap-sizer {
-		display: none;
+	.activity-details {
+		display: block;
+	    padding: 0 10px;
+	    border: 1px solid;
 	}
 
-	.activity-title {
-		font-size: 27px;
+	#filters-section-wrap, 
+	#js-filters-section-wrap-sizer,
+	span.filter-text,
+	#js-main-nav,
+	span.activity-title  {
+		display: none;
 	}
 
 	.filter-text {
@@ -1278,10 +1320,14 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 
 /*  ONE COLUMN */
 
-@media only screen and (max-width: 500px) {
-	#about-mobile {
-	display: inline-block;
-}
+	@media only screen and (max-width: 500px) {
+		#about-mobile {
+		display: inline-block;
+	}
+
+	.image-text-inner {
+    	left: 35%;
+	}
 
 	article#mobile-nav {
 		display: block;
@@ -1447,10 +1493,6 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 	.resources-about{
 		font-size:16px;
 		padding: 20px;
-	}
-
-	.image-text {
-		display: none;
 	}
 
 	.slider {
