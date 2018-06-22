@@ -655,7 +655,8 @@ h1.hash{
 	width: 100%;
 	float: left;
 	height: 100%;
-	border: 1px solid #fff;
+	border-right: 1px solid #fff;
+    border-top: 1px solid #ffffff;
 }
 
 .image-text {
@@ -1266,6 +1267,10 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 		display:none;
 	}
 
+	article#main-nav {
+		display: none;
+	}
+
 	.age {	
 	    background-color: rgb(240, 240, 240, 0.5);
 		color: #888888;
@@ -1276,7 +1281,7 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 	    left: 0;
 	    right: 0;
 	    margin: 0px;
-	    padding: 5px 10px;
+	    padding: 10px;
 	    font-size: 14px;
 	}
 
@@ -1363,10 +1368,6 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
     	text-align: center;
     	padding: 10px;
     	font-size: 18px;
-	}
-
-	article#main-nav {
-		display: none;
 	}
 
 	#contact {
