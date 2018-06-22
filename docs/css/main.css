@@ -1270,7 +1270,7 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 
 	.image-text-inner {
 	    width: auto;
-    	left: 24%;
+    	left: 35%;
     	top: 90%;
 	}
 
@@ -1327,7 +1327,7 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 	}
 
 	.image-text-inner {
-    	left: 35%;
+    	left: 24%;
 	}
 
 	article#mobile-nav {
@@ -1483,7 +1483,7 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 	}
 
 	.share-icon {
-		margin: 9px 3px 0px 3px;
+		margin: 9px 6px 0px 6px;
 	}
 
 	#contact {
