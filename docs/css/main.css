@@ -1039,7 +1039,7 @@ input[type=checkbox]:checked ~ [for="publications"] span:last-of-type {
 	border: 1px solid #fff;
     margin: 20px;
     max-width: 200px;
-    margin: 0 auto;
+    margin: 20px auto;
     font-size: 18px;
     padding: 5px 0;
     text-align: center;
@@ -1351,6 +1351,8 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 		display: inline-block;
 		height: 390px;
 		font-size: 16px;
+		padding-top: 20px;
+		text-align: center;
 	}
 
 	#about {
