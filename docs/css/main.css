@@ -172,6 +172,10 @@ input:focus, textarea:focus {
 	display: none;
 }
 
+.about-mobile-top {
+	display: none;
+}
+
 .hash {
 	font-family: helvetica;
 }
@@ -291,11 +295,12 @@ input[type=checkbox]:checked ~ [for="read_more"] span:last-of-type {
 }
 
 article#main-nav {
-	background-color: #f0f0f0;
+	background-color: #e0e0e0;
     top: 0;
     position: fixed;
     width: 100%;
-    z-index:1000;
+    z-index: 1000;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 article#mobile-nav {
@@ -437,7 +442,7 @@ ul.top-menu {
 }
 
 .menu-item {
-	float: left;
+	float: right;
 	padding:5px 10px;
 	font-size: 18px;
 }
@@ -451,11 +456,15 @@ ul.top-menu {
 	font-size: 18px;
 }
 
-.menu-logo {
-}
-
 .logo{
 	font-family: 'rectamedium';
+}
+
+.logo-nav {
+	font-size: 21px;
+    padding: 2px 15px;
+    color: #333;
+    float: left;
 }
 
 /* SEARCH BAR */
@@ -865,6 +874,7 @@ ul.activity-text li{ text-indent:-5px; }
     .slider {
     	width: 80%;
      	margin: 0px auto;
+     	padding-top: 20px;
     }
 
     .slick-slide {
@@ -1214,7 +1224,8 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 
 [for="categories"] {
 	font-size: 18px;
-	float: left;
+	float: right;
+	color:#333;
 }
 
 [for="categories"]:hover {
@@ -1263,13 +1274,6 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 /*  TWO COLUMN */
 
 @media only screen and (max-width: 768px) {
-	nav {
-		display:none;
-	}
-
-	article#main-nav {
-		display: none;
-	}
 
 	.age {	
 	    background-color: rgb(240, 240, 240, 0.5);
@@ -1304,10 +1308,12 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 	    border: 1px solid;
 	}
 
-	#filters-section-wrap, 
+	#filters-section-wrap,
+	.menu-item.contact-menu,
+	.menu-item.activities,
+	.menu-item.resources,  
 	#js-filters-section-wrap-sizer,
 	span.filter-text,
-	#js-main-nav,
 	span.activity-title,
 	.no-content  {
 		display: none;
@@ -1355,12 +1361,19 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 		text-align: center;
 	}
 
+	.about-mobile-top {
+		color: #4a4a4a;
+		display: block;
+		padding: 0 10px;
+		text-align: center;
+	}
+
 	#about {
 		display: none;
 	}
 
 	article#mobile-nav {
-		display: block;
+		display: none;
     	background-color: #f0f0f0;
     	top: 0;
     	position: fixed;
@@ -1408,9 +1421,8 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 		font-size: 16px;
 	}
 
-	.menu-item.contact-menu, 
+
 	.slider, 
-	#js-main-nav, 
 	#filters-section-wrap, 
 	#js-filters-section-wrap-sizer, 
 	#read-more,

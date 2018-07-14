@@ -100,12 +100,13 @@
     </div>
     <article id="main-nav">
         <input type="checkbox" id="categories" role="button">
-        <a href="#activities" class="menu-item"> activities </a>      
+        <span class="logo-nav"><span class="hash">#</span>makeplay</span>
+        <a href="#activities" class="menu-item activities"> activities </a>      
         <label for="categories">
             <span class="menu-item">filters +</span>
             <span class="menu-item">filters -</span>
         </label> 
-        <a href="#resources" class="menu-item"> resources </a> 
+        <a href="#resources" class="menu-item resources"> resources </a> 
         <a href="mailto:makeplay.net@gmail.com" class="menu-item contact-menu"> contact </a>  
       <section>
         <div class="filters">
@@ -135,9 +136,45 @@
         </div>
       </section>
     </article>
+    <article>
+		<p class="about-mobile-top">
+              <span class="logo"><span class="hash">#</span>makeplay</span> provides activities for busy parents with projects that encourage creativity, self-directed play and learning. <a href="#about-mobile"> Read more </a> below. </a>
+        </p> 
+     </article>
     <article id="mobile-nav">
     	<input type="checkbox" id="categories" role="button">
-        <a href="#about-mobile" <span class="hash">#</span>makeplay</span> </a>      
+        <a href="#about-mobile" <span class="hash">#</span>makeplay</span> </a>  
+        <label for="categories">
+            <span class="menu-item">filters +</span>
+            <span class="menu-item">filters -</span>
+        </label> 
+      <section>
+        <div class="filters">
+          <div class="col span_1_of_3 filter-group">
+            <h1> setup </h1>
+            <span class="filter-option js-active js-all"> all </span>  
+            <span class="filter-option" data-filter=".setup-improvised">improvised </span>
+            <span class="filter-option" data-filter=".setup-planned">planned </span>
+          </div>
+          <div class="col span_2_of_3 filter-group">
+            <h1> location </h1>
+            <div class="filter-menu">
+              <span class="filter-option js-active js-all">all</span> 
+              <span class="filter-option" data-filter=".location-indoor">indoor </span>
+              <span class="filter-option" data-filter=".location-outdoor">outdoor</span>
+              <span class="filter-option" data-filter=".location-travel">travel</span>
+              <span class="filter-option" data-filter=".location-waiting">waiting</span>
+            </div>
+          </div>
+          <div class="col span_3_of_3 filter-group">
+            <h1> age </h1>
+            <span class="filter-option js-active js-all">all</span> 
+            <span class="filter-option" data-filter=".age-1-2">1-2</span> 
+            <span class="filter-option" data-filter=".age-3-5">3-5</span> 
+            <span class="filter-option" data-filter=".age-6-8">6-8</span> 
+          </div>
+        </div>
+      </section>   
     </article>
     
     <!-- IMAGE GRID -->    
