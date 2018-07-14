@@ -1364,7 +1364,7 @@ input[type=checkbox]:checked ~ [for="categories"] span:last-of-type {
 	.about-mobile-top {
 		color: #4a4a4a;
 		display: block;
-		padding: 0 10px;
+		padding: 0 10px 10px 0;
 		text-align: center;
 	}
 
